@@ -15,9 +15,39 @@ export default class App extends React.Component {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='balance'>Loan Balance</label>
-            <div className='col-sm-10'>
-              <input className='form-control' name='balance' type='number' placeholder='0' />
+            <label htmlFor='balance' className='col-sm-2 control-label'>Loan Balance</label>
+            <div className='col-sm-5'>
+              <input type='number' className='form-control' name='balance' placeholder='0' />
+            </div>
+          </div>
+
+          <div className='form-group'>
+            <label htmlFor='rate' className='col-sm-2 control-label'>Interest Rate (%)</label>
+            <div className='col-sm-5'>
+              <input type='number' className='form-control' name='rate' step='0.01' placeholder='0' />
+            </div>
+          </div>
+
+          <div className='form-group'>
+            <label htmlFor='term' className='col-sm-2 control-label'>Loan Term (years)</label>
+            <div className='col-sm-5'>
+              <select className='form-control' name='term' >
+                <option value='15'>15</option>
+                <option value='30'>30</option>
+              </select>
+            </div>
+          </div>
+
+          <div className='form-group'>
+            <div className='col-sm-offset-2 col-sm-5'>
+              <button type='submit' className='btn btn-primary' name='submit'>Calculate</button>
+            </div>
+          </div>
+
+          <div className='form-group'>
+            <label htmlFor='output' className='col-sm-2 control-label'>Mortgage Payment</label>
+            <div className='col-sm-5'>
+              <output type='number' className='form-control' name='output' />
             </div>
           </div>
 
