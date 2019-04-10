@@ -24,4 +24,4 @@ $ npm start
 
 ## Now
 Deployed to NOW through URL
->https:
+>https://react100-mortgage-calculator-r49vzzxee.now.sh
