@@ -10,72 +10,34 @@ export default class App extends React.Component {
       term: '',
       payment: ''
     };
-    // console.log(this.state.payment);
-      // this.handleClick = this.handleClick.bind(this);
     this.calculateButton = this.calculateButton.bind(this);
 
     this.updateBalance = this.updateBalance.bind(this);
     this.updateRate = this.updateRate.bind(this);
     this.updateTerm = this.updateTerm.bind(this);
-    this.updatePayment = this.updatePayment.bind(this);
   }
-/*
-  calculateButton(event) {
-    console.log('hello');
-
-    event.preventDefault();
-    this.setState({ payment: event.target.value });
-  }
-*/
 
   calculateButton(event) {
     event.preventDefault();
-    console.log('inside calculate');
     const b = this.state.balance;
     const r = (this.state.rate / 100) / 12;
     const t = this.state.term * 12;
     const monthlyPayment = (b * ((r * ((1 + r) ** t)) / (((1 + r) ** t) - 1))).toFixed(2);
-    console.log(`after payment ${monthlyPayment}`);
-    // this.setState({ payment: monthlyPayment });
-    this.setState({ payment: monthlyPayment },
-      function () {
-        console.log(`after setState for payment ${this.state.payment}`);
-      });
+    this.setState({ payment: monthlyPayment });
   }
 
   updateBalance(event) {
     this.setState({ balance: event.target.value });
-    console.log('inside updateBalance');
   }
 
   updateRate(event) {
     this.setState({ rate: event.target.value });
-    console.log('inside updateRate');
   }
   updateTerm(event) {
     this.setState({ term: event.target.value });
-    console.log('inside updateevent');
   }
-  updatePayment(event) {
-    this.setState({ payment: event.target.value });
-    console.log('inside updatePayment');
-  }
-
-  /* handleClick(e) {
-    if (e.target.name = 'balance') {
-      this.setState({ balance: e.target.value });
-      console.log(this.props.balance);
-    } else if (e.target.name = 'rate') {
-      this.setState({ rate: e.target.value });
-      console.log(this.props.rate);
-    } else if (e.target.name = 'term') {
-      this.setState({ term: e.target.value });
-    }
-  }
-*/
 
   render() {
-    console.log('inside render');
     return (
       <div className='container'> {
 
