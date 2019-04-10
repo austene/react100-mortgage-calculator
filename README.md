@@ -1,14 +1,14 @@
 # react100-mortgage-calculator
 
 ## Purpose of Program
-Creates a mortgage calculator to produce a monthly payment based on following inputs:
+Creates a mortgage calculator to produce a monthly payment based on the following inputs:
 - Loan Balance
 - Interest Rate
-- Term (dropdown list)
+- Terms (dropdown list)
 ## Setup
 
 ### Clone
-Clone respository.
+Clone respository
 ### Install
 ```
 $ npm install
@@ -16,11 +16,11 @@ $ npm install
 ### Run
 1. Open a browser at localhost: 3000
 
-2. 
+2. Build and start server
 ```
 $ npm start
 ```
-(run build and start combined in package.json for `npm start`.)
+(build and start combined in package.json for `npm start`.)
 
 ## Now
 Deployed to NOW through URL
